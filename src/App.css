@@ -1,38 +1,111 @@
+body {
+  background-color: #f1e8dc;
+  font-family: "Lato", sans-serif !important;
+}
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  margin: auto;
+  width: 450px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  margin: 15px 0 5px 0;
+}
+
+label + span {
+  font-size: smaller;
+  display: block;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #f1e8dc;
+  display: block;
+  box-shadow: 1px 1px 2px;
+  font-size: medium;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: "Lato", sans-serif !important;
+}
+.title {
+  margin: 20px 20px 20px 0;
+}
+
+.inc-exp-container {
+  display: flex;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: aliceblue;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px;
+}
+.inc-exp-container > div {
+  flex: 1;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0 35px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list li {
+  background-color: #fff;
+
+  justify-content: space-between;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 1px 1px 0px 1px;
+  padding: 5px;
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 10px;
   color: white;
+  background-color: #1e568a;
+  width: 100%;
+  font-family: monospace;
+  font-size: x-large;
+  text-transform: uppercase;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #2494ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.amount {
+  font-weight: 200;
+  font-size: larger;
+  margin: 5px 0;
+}
+
+.positive {
+  color: #2494ff;
+}
+
+.negative {
+  color: #ff5959;
 }
