@@ -68,11 +68,16 @@ input {
 
 .list li {
   background-color: #fff;
-
+  margin: 5px;
   justify-content: space-between;
   display: flex;
   box-shadow: 1px 1px 0px 1px;
+  position: relative;
   padding: 5px;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
 }
 
 .form-control {
@@ -92,6 +97,22 @@ input {
   border: none;
 }
 
+.delete-btn {
+  font-size: larger;
+  padding: 5px;
+
+  opacity: 0;
+  border: 0;
+  background-color: #ff1b1b;
+  font-family: monospace;
+  color: white;
+  cursor: pointer;
+  right: 0;
+  transform: translate(100%, -50%);
+  top: 50%;
+  position: absolute;
+}
+
 .btn:hover {
   background-color: #2494ff;
 }
@@ -107,5 +128,12 @@ input {
 }
 
 .negative {
-  color: #ff5959;
+  color: #ff1b1b;
+}
+
+.credit {
+  color: green;
+}
+.debit {
+  color: #b80808;
 }

@@ -3,13 +3,13 @@ export const AppReducer = (state, action) => {
     case "ADD_TXN":
       return {
         ...state,
-        transactions: [action.payload, ...state.transactions],
+        transactions: [action.data, ...state.transactions],
       };
     case "DEL_TXN":
       return {
         ...state,
         transactions: state.transactions.filter(
-          (transaction) => transaction.id !== action.payload
+          (transaction) => transaction.id !== action.data
         ),
       };
 
